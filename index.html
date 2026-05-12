@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Extraemos, limpiamos y estructuramos datos de cualquier fuente web. Listos para Power BI, Excel o tu base de datos.">
+  <meta name="author" content="DataDive Solutions">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="DataDive Solutions — Datos listos para decisiones">
+  <meta property="og:description" content="Web scraping profesional. Datos estructurados entregados en 48h.">
+  <meta property="og:type"        content="website">
+
+  <title>DataDive Solutions — Datos listos para decisiones</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <header>
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="nav-logo" href="#" aria-label="DataDive Solutions — Inicio">
+        Data<span>Dive</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#muestra">Muestra</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#paquetes">Paquetes</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacto" class="nav-cta">Solicitar presupuesto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <div class="hero-badge" aria-hidden="true">✦ Datos estructurados · Entrega en 48h</div>
+        <h1 id="hero-heading">
+          Tus datos de mercado,<br>
+          <em>listos para Power BI</em><br>
+          y Excel hoy.
+        </h1>
+        <p>
+          Extraemos, limpiamos y estructuramos información de cualquier fuente web.
+          Sin ruido, sin duplicados, en el formato exacto que tu equipo necesita.
+        </p>
+        <div class="hero-actions">
+          <a href="#muestra"  class="btn-primary">Ver muestra de datos →</a>
+          <a href="#contacto" class="btn-ghost">Solicitar presupuesto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         STATS BAR
+    ══════════════════════════════════════════ -->
+    <div class="stats-bar" role="region" aria-label="Cifras clave">
+      <div class="stats-inner">
+        <div>
+          <span class="stat-num">345k+</span>
+          <span class="stat-label">Registros procesados</span>
+        </div>
+        <div>
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Proyectos entregados</span>
+        </div>
+        <div>
+          <span class="stat-num">90%</span>
+          <span class="stat-label">Reducción de tiempo de recolección</span>
+        </div>
+        <div>
+          <span class="stat-num">48h</span>
+          <span class="stat-label">Tiempo promedio de entrega</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         MUESTRA DE DATOS
+    ══════════════════════════════════════════ -->
+    <section id="muestra" aria-labelledby="muestra-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">// data sample</p>
+        <h2 class="section-title" id="muestra-heading">Descarga una muestra real</h2>
+        <p class="section-sub">
+          Así se ven los datos que entregamos: limpios, tipados y listos para conectar a tu
+          dashboard. Sin celdas vacías, sin caracteres extraños.
+        </p>
+
+        <div class="table-preview" role="region" aria-label="Muestra de dataset inmobiliario">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">portal</th>
+                <th scope="col">titulo</th>
+                <th scope="col">precio_mxn</th>
+                <th scope="col">m2</th>
+                <th scope="col">recamaras</th>
+                <th scope="col">colonia</th>
+                <th scope="col">lat</th>
+                <th scope="col">lng</th>
+                <th scope="col">estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Inmuebles24</td>
+                <td>Casa en venta Roma Norte</td>
+                <td>4,850,000</td>
+                <td>120</td>
+                <td>3</td>
+                <td>Roma Norte</td>
+                <td>19.4187</td>
+                <td>-99.1617</td>
+                <td><span class="tag tag-ok">limpio</span></td>
+              </tr>
+              <tr>
+                <td>Lamudi</td>
+                <td>Depto Polanco vista panorámica</td>
+                <td>8,200,000</td>
+                <td>95</td>
+                <td>2</td>
+                <td>Polanco</td>
+                <td>19.4350</td>
+                <td>-99.1990</td>
+                <td><span class="tag tag-ok">limpio</span></td>
+              </tr>
+              <tr>
+                <td>MercadoLibre</td>
+                <td>Terreno industrial Vallejo</td>
+                <td>12,500,000</td>
+                <td>450</td>
+                <td>—</td>
+                <td>Vallejo</td>
+                <td>19.4720</td>
+                <td>-99.1580</td>
+                <td><span class="tag tag-ok">limpio</span></td>
+              </tr>
+              <tr>
+                <td>Century21</td>
+                <td>Casa Pedregal con alberca</td>
+                <td>22,000,000</td>
+                <td>380</td>
+                <td>5</td>
+                <td>Pedregal</td>
+                <td>19.3210</td>
+                <td>-99.2100</td>
+                <td><span class="tag tag-ok">limpio</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="download-row">
+          <span style="font-size:0.85rem; color:var(--color-muted);">Descargar muestra real:</span>
+          <a class="download-chip"
+             href="https://wa.me/525579811317?text=Hola,%20quiero%20descargar%20una%20muestra%20de%20datos"
+             target="_blank" rel="noopener noreferrer">
+            <span class="chip-icon" aria-hidden="true">📊</span> Muestra XLSX
+          </a>
+          <a class="download-chip"
+             href="https://wa.me/525579811317?text=Hola,%20quiero%20descargar%20una%20muestra%20de%20datos%20en%20CSV"
+             target="_blank" rel="noopener noreferrer">
+            <span class="chip-icon" aria-hidden="true">📄</span> Muestra CSV
+          </a>
+          <a class="download-chip"
+             href="https://wa.me/525579811317?text=Hola,%20quiero%20descargar%20una%20muestra%20de%20datos%20en%20JSON"
+             target="_blank" rel="noopener noreferrer">
+            <span class="chip-icon" aria-hidden="true">⚙️</span> Muestra JSON
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         PROCESO
+    ══════════════════════════════════════════ -->
+    <section id="proceso" aria-labelledby="proceso-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">// cómo funciona</p>
+        <h2 class="section-title" id="proceso-heading">Tres pasos, datos en mano</h2>
+        <p class="section-sub">Sin contratos complicados. Sabes exactamente qué esperar desde el primer mensaje.</p>
+
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-num" aria-hidden="true">01</div>
+            <h3>Diagnóstico de fuentes</h3>
+            <p>Analizamos el sitio objetivo: estructura, protecciones, volumen estimado y frecuencia de actualización. Te enviamos un diagnóstico técnico sin costo.</p>
+          </div>
+          <div class="step">
+            <div class="step-num" aria-hidden="true">02</div>
+            <h3>Extracción de muestra</h3>
+            <p>Antes de escalar, extraemos entre 50 y 200 registros para que valides la estructura y calidad de los datos con tu equipo.</p>
+          </div>
+          <div class="step">
+            <div class="step-num" aria-hidden="true">03</div>
+            <h3>Entrega final</h3>
+            <p>Extraemos el volumen completo, limpiamos, tipamos y entregamos en el formato que necesites: XLSX, CSV, JSON, XML o directo a tu base de datos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SERVICIOS
+    ══════════════════════════════════════════ -->
+    <section id="servicios" aria-labelledby="servicios-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">// servicios</p>
+        <h2 class="section-title" id="servicios-heading">Qué podemos extraer para ti</h2>
+        <p class="section-sub">Desde catálogos de productos hasta datos catastrales masivos, cada proyecto recibe su arquitectura de scraping propia.</p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏷️</div>
+            <h3>Monitoreo de precios eCommerce</h3>
+            <p>Seguimiento continuo de precios, stock y variantes en tiendas online. Alertas automáticas cuando un competidor cambia su tarifa.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏠</div>
+            <h3>Datos inmobiliarios</h3>
+            <p>Portales como Lamudi, Propiedades.com e Inmuebles24. Coordenadas GPS, precios, características y tendencias de mercado.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🗺️</div>
+            <h3>Datos catastrales y GIS</h3>
+            <p>Extracción masiva de portales oficiales. Coordenadas, límites prediales y atributos legales listos para QGIS o ArcGIS.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">📰</div>
+            <h3>Monitoreo de medios y noticias</h3>
+            <p>Rastreo de publicaciones, clasificación por tema o región y generación de mapas de calor o reportes automatizados.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">⚙️</div>
+            <h3>Automatización de reportes</h3>
+            <p>Pipelines que extraen, procesan y depositan datos frescos en tu Google Sheet, base de datos o dashboard cada hora, día o semana.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🔒</div>
+            <h3>Scraping con login y CAPTCHAs</h3>
+            <p>Accedemos a portales protegidos con autenticación, JavaScript pesado o sistemas antibot avanzados.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         PAQUETES
+    ══════════════════════════════════════════ -->
+    <section id="paquetes" aria-labelledby="paquetes-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">// paquetes</p>
+        <h2 class="section-title" id="paquetes-heading">Precios claros, sin sorpresas</h2>
+        <p class="section-sub">
+          Todos los paquetes incluyen limpieza, formateo y la estructura de columnas que definas.
+          También puedes cotizar por volumen de registros o adquirir el script para uso propio.
+        </p>
+
+        <div class="packages-grid">
+
+          <!-- Básico -->
+          <article class="pkg">
+            <div class="pkg-name">Básico</div>
+            <div class="pkg-price">$50 <span>USD</span></div>
+            <div class="pkg-per-record">≈ $0.50 por registro · hasta 100 registros</div>
+            <p class="pkg-desc">Ideal para validar una fuente o hacer una exploración rápida de mercado. Sitios estáticos sin protecciones antibot.</p>
+            <ul class="pkg-features" role="list">
+              <li>1 sitio web</li>
+              <li>Hasta 100 páginas / registros</li>
+              <li>Sitios sin antibot ni JS pesado</li>
+              <li>Limpieza y tipado de datos incluido</li>
+              <li>Entrega: XLSX, CSV, JSON o XML</li>
+              <li>Diagnóstico técnico previo sin costo</li>
+            </ul>
+            <a href="https://wa.me/525579811317?text=Hola,%20me%20interesa%20el%20paquete%20Básico"
+               class="btn-ghost" target="_blank" rel="noopener noreferrer">
+              Solicitar →
+            </a>
+          </article>
+
+          <!-- Estándar (featured) -->
+          <article class="pkg featured">
+            <div class="pkg-badge" aria-label="Más popular">MÁS POPULAR</div>
+            <div class="pkg-name">Estándar</div>
+            <div class="pkg-price">$150 <span>USD</span></div>
+            <div class="pkg-per-record">≈ $0.75 por registro · hasta 200 registros</div>
+            <p class="pkg-desc">Para sitios dinámicos con JavaScript, lazy loading o paginación infinita. Incluye manejo básico de antibot.</p>
+            <ul class="pkg-features" role="list">
+              <li>2 sitios web</li>
+              <li>Hasta 200 páginas / registros</li>
+              <li>Scraping JS avanzado (Playwright)</li>
+              <li>Rotación de proxies datacenter</li>
+              <li>Limpieza y tipado de datos incluido</li>
+              <li>1 revisión de estructura de columnas</li>
+              <li>Entrega: XLSX, CSV, JSON o XML</li>
+              <li>Diagnóstico técnico previo sin costo</li>
+            </ul>
+            <a href="https://wa.me/525579811317?text=Hola,%20me%20interesa%20el%20paquete%20Estándar"
+               class="btn-primary" target="_blank" rel="noopener noreferrer">
+              Solicitar →
+            </a>
+          </article>
+
+          <!-- Premium -->
+          <article class="pkg">
+            <div class="pkg-name">Premium</div>
+            <div class="pkg-price">$350 <span>USD</span></div>
+            <div class="pkg-per-record">≈ $0.875 por registro · hasta 400 registros</div>
+            <p class="pkg-desc">Proyectos complejos: login requerido, bypass antibot avanzado (Cloudflare, Akamai) y múltiples fuentes simultáneas.</p>
+            <ul class="pkg-features" role="list">
+              <li>3 sitios web</li>
+              <li>Hasta 400 páginas / registros</li>
+              <li>Scraping Python avanzado (Scrapy + Playwright)</li>
+              <li>Login, sesiones y bypass antibot</li>
+              <li>Proxies residenciales rotativos incluidos</li>
+              <li>Limpieza y tipado de datos incluido</li>
+              <li>2 revisiones de estructura de columnas</li>
+              <li>Entrega: cualquier formato o BD directa</li>
+              <li>Diagnóstico técnico previo sin costo</li>
+            </ul>
+            <a href="https://wa.me/525579811317?text=Hola,%20me%20interesa%20el%20paquete%20Premium"
+               class="btn-ghost" target="_blank" rel="noopener noreferrer">
+              Solicitar →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         TESTIMONIOS
+    ══════════════════════════════════════════ -->
+    <section id="casos" aria-labelledby="casos-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">// casos de éxito</p>
+        <h2 class="section-title" id="casos-heading">Lo que dicen nuestros clientes</h2>
+        <p class="section-sub">Resultados medibles, no promesas genéricas.</p>
+
+        <div class="testimonials">
+          <blockquote class="testimonial">
+            <div class="metric-chip">↓ 90% tiempo de recolección</div>
+            <p class="quote">Antes tardábamos tres días en consolidar precios de la competencia. Ahora el reporte llega automático cada lunes a las 8 AM con datos del día anterior.</p>
+            <footer class="author">
+              <div class="author-avatar" aria-hidden="true">M</div>
+              <div>
+                <cite class="author-name">Mariana L.</cite>
+                <p class="author-role">Gerente de Pricing · Retail CDMX</p>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <div class="metric-chip">345k registros · 4 días</div>
+            <p class="quote">Necesitábamos todo el catastro de tres municipios para un modelo de valuación. Entregaron shapefiles perfectos, directo a QGIS, sin ningún error de coordenadas.</p>
+            <footer class="author">
+              <div class="author-avatar" aria-hidden="true">R</div>
+              <div>
+                <cite class="author-name">Roberto C.</cite>
+                <p class="author-role">Analista GIS · Consultoría inmobiliaria</p>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <div class="metric-chip">50k+ propiedades estructuradas</div>
+            <p class="quote">El dataset que construyeron nos permitió entrenar nuestro modelo de valuación con datos reales del mercado. La calidad de limpieza fue impecable.</p>
+            <footer class="author">
+              <div class="author-avatar" aria-hidden="true">A</div>
+              <div>
+                <cite class="author-name">Andrea V.</cite>
+                <p class="author-role">Data Scientist · PropTech startup</p>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         LEGAL / CUMPLIMIENTO
+    ══════════════════════════════════════════ -->
+    <section id="legal" aria-labelledby="legal-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">// cumplimiento y ética</p>
+        <h2 class="section-title" id="legal-heading">Extraemos datos de forma responsable</h2>
+        <p class="section-sub">El scraping es legal cuando se hace bien. Aquí explicamos cómo operamos.</p>
+
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">🛡️</div>
+            <h4>Solo datos públicos</h4>
+            <p>Extraemos únicamente información disponible públicamente, sin acceder a sistemas privados ni eludir autenticaciones sin autorización del cliente.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">⚖️</div>
+            <h4>Cumplimiento LFPDPPP</h4>
+            <p>Operamos bajo la Ley Federal de Protección de Datos Personales. Los datos personales se manejan con protocolos de anonimización cuando aplica.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">🐢</div>
+            <h4>Extracción no invasiva</h4>
+            <p>Controlamos la tasa de peticiones (rate limiting) para no sobrecargar los servidores de origen. Tu proveedor de datos no se ve afectado.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">🔏</div>
+            <h4>NDA y confidencialidad</h4>
+            <p>Firmamos acuerdos de confidencialidad antes de iniciar cualquier proyecto. Tu estrategia de datos y fuentes de información son estrictamente privadas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         FAQ
+    ══════════════════════════════════════════ -->
+    <section id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">// preguntas frecuentes</p>
+        <h2 class="section-title" id="faq-heading">Resolvemos tus dudas técnicas</h2>
+        <p class="section-sub">Las preguntas que hacen los equipos de datos antes de contratar.</p>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              ¿Cómo manejan los bloqueos de IP y sistemas antibot?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              Usamos rotación de proxies residenciales, user-agent dinámico y técnicas de comportamiento
+              humano simulado (tiempos aleatorios entre peticiones, movimiento de ratón en navegadores
+              headless). Para sistemas Cloudflare o Akamai avanzados, evaluamos el caso en el diagnóstico
+              inicial y te informamos si hay limitaciones técnicas antes de cobrar nada.
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              ¿Con qué frecuencia se pueden actualizar los datos?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              Desde actualizaciones en tiempo real (cada hora) hasta snapshots semanales o mensuales.
+              Para automatizaciones recurrentes ofrecemos un plan de mantenimiento mensual que incluye
+              monitoreo del pipeline y correcciones si el sitio cambia su estructura.
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              ¿En qué formatos entregan los datos?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              XLSX, CSV, JSON, XML y TXT plano. Si necesitas carga directa a una base de datos
+              (PostgreSQL, MySQL, BigQuery, Airtable, Google Sheets), también lo configuramos.
+              Para proyectos GIS entregamos shapefiles (.shp) o GeoJSON listos para QGIS o ArcGIS.
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              ¿Qué pasa si el sitio web de origen cambia su estructura?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              En proyectos de extracción recurrente incluimos monitoreo activo: si el sitio cambia su
+              HTML o su API interna, detectamos la ruptura y actualizamos el script dentro de 24–48 horas
+              sin costo adicional durante el período contratado.
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              ¿Puedo comprar el script para ejecutarlo yo mismo?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              Sí. Entregamos el código documentado en Python (Scrapy, Playwright o BeautifulSoup según
+              el caso) con instrucciones de ejecución. También podemos configurarlo para que corra en
+              un servidor o en AWS Lambda si prefieres la ejecución en la nube.
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              ¿Tienen datasets ya disponibles sin esperar extracción?
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              Sí. Contamos con datasets listos para entrega inmediata en los sectores inmobiliario
+              (CDMX y principales ciudades), e-commerce (electrónica, moda, ferretería) y finanzas
+              (tasas bancarias, tipos de cambio históricos). Escríbenos y te decimos si tenemos lo
+              que necesitas.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CONTACTO
+    ══════════════════════════════════════════ -->
+    <section id="contacto" aria-labelledby="contacto-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <p class="section-label" aria-hidden="true">// contacto</p>
+            <h2 id="contacto-heading">Solicita tu auditoría de fuentes sin costo</h2>
+            <p>Cuéntanos qué datos necesitas y de dónde. En menos de 24 horas te enviamos un diagnóstico técnico con viabilidad, tiempo estimado y precio exacto.</p>
+            <ul class="contact-bullets" role="list">
+              <li>Sin compromiso de compra para el diagnóstico</li>
+              <li>Muestra real de tus datos antes de pagar</li>
+              <li>Respuesta en menos de 24 horas hábiles</li>
+              <li>Datasets listos para entrega inmediata disponibles</li>
+            </ul>
+          </div>
+
+          <div class="form-card">
+            <form action="https://formsubmit.co/contactoddsolutions@gmail.com" method="POST" novalidate>
+
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo corporativo</label>
+                <input type="email" id="email" name="email" placeholder="tu@empresa.com" required autocomplete="email">
+                <p class="form-hint">Preferimos correo corporativo para proyectos empresariales.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="url_sitio">URL del sitio a procesar</label>
+                <input type="url" id="url_sitio" name="url_sitio" placeholder="https://sitio-objetivo.com">
+                <p class="form-hint">Si tienes varios, menciónalos en el mensaje.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Cuéntanos tu proyecto</label>
+                <textarea id="message" name="message" placeholder="¿Qué datos necesitas? ¿Con qué frecuencia? ¿Para qué los usarás?" required></textarea>
+              </div>
+
+              <!-- FormSubmit hidden fields -->
+              <input type="hidden" name="_next"    value="https://arifnvz.github.io/ddsolutions/">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="Nueva solicitud de auditoría — DataDive">
+
+              <button type="submit" class="btn-primary form-submit">
+                Solicitar auditoría gratuita →
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-logo">Data<span>Dive</span> Solutions</p>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="legal.html">Política de Privacidad</a>
+        <a href="legal.html">Términos y Condiciones</a>
+      </nav>
+      <p>© 2025 DataDive Solutions. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       FLOATING CTA
+  ══════════════════════════════════════════ -->
+  <div class="float-cta" aria-label="Contacto rápido">
+    <a href="https://wa.me/525579811317"
+       class="float-btn float-wa"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Contáctanos por WhatsApp">
+      💬
+    </a>
+    <a href="https://www.facebook.com/share/1CLUdDTgsz/?mibextid=wwXlfr"
+       class="float-btn float-fb"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Contáctanos por Facebook">
+      📘
+    </a>
+  </div>
+
+  <!-- Script — deferred so it runs after the DOM is fully parsed -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
