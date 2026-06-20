@@ -1,0 +1,110 @@
+/* ============================================================
+   DataDive — Mundial 2026 (estilos adicionales)
+   Este archivo NO reemplaza a styles.css; lo complementa.
+   Reutiliza los design tokens (:root) ya definidos en styles.css.
+   ============================================================ */
+
+/* ── Hero variante mundial ────────────────────────────────── */
+.hero--mundial::before {
+  background: radial-gradient(circle, rgba(0, 184, 255, 0.10) 0%, transparent 70%);
+}
+.hero--mundial .hero-badge {
+  border-color: rgba(0, 184, 255, 0.3);
+  background: rgba(0, 184, 255, 0.10);
+  color: var(--color-accent-2);
+}
+.hero--mundial h1 em { color: var(--color-accent-2); }
+
+
+/* ── Lista de columnas del dataset ────────────────────────── */
+.dataset-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+.dataset-col {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.dataset-col::before {
+  content: '▸';
+  color: var(--color-accent-2);
+  flex-shrink: 0;
+}
+
+
+/* ── Caja de descarga (formulario gated en footer) ────────── */
+.download-gate {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.download-gate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+.download-gate-grid .form-group.full { grid-column: 1 / -1; }
+
+/* select reutiliza el estilo de input */
+.download-gate select {
+  width: 100%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem var(--space-md);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition-base);
+}
+.download-gate select:focus { border-color: var(--color-accent); }
+
+/* Honeypot: invisible para humanos, atractivo para bots */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Mensaje de estado del formulario */
+.form-status {
+  margin-top: var(--space-md);
+  font-size: 0.85rem;
+  min-height: 1.2em;
+  text-align: center;
+}
+.form-status.error   { color: var(--color-danger); }
+.form-status.success { color: var(--color-accent); }
+.form-status.loading { color: var(--color-muted); }
+
+/* Botón en estado deshabilitado */
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .download-gate-grid { grid-template-columns: 1fr; }
+  .download-gate { padding: var(--space-lg); }
+}

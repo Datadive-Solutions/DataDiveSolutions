@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dataset de partidos de selecciones rumbo al Mundial 2026, listo para entrenar tu modelo predictivo. Descarga la muestra en CSV.">
+  <meta name="author" content="DataDive Solutions">
+
+  <meta property="og:title"       content="Dataset Mundial 2026 — Partidos de selecciones | DataDive">
+  <meta property="og:description" content="Datos históricos y de clasificación listos para modelos predictivos. Descarga en CSV.">
+  <meta property="og:type"        content="website">
+
+  <title>Dataset Mundial 2026 — Partidos de selecciones | DataDive Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos base (reutilizados) + estilos específicos de esta página -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mundial.css">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1677530406272596');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1677530406272596&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <header>
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="nav-logo" href="index.html" aria-label="DataDive Solutions — Inicio">
+        Data<span>Dive</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#paquetes">Paquetes</a></li>
+        <li><a href="mundial-2026.html" aria-current="page">Mundial 2026</a></li>
+        <li><a href="#descarga" class="nav-cta">Descargar dataset</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero hero--mundial" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <div class="hero-badge" aria-hidden="true">⚽ Dataset listo · Mundial 2026</div>
+        <h1 id="hero-heading">
+          World Cup 2026 Predictor<br>
+          <em>9,000+ partidos para anticipar al próximo campeón</em>
+        </h1>
+        <p>
+          Resultados históricos, clasificatorias y estadísticas por encuentro. Conéctalos directo a tu pipeline de
+          machine learning y empieza a predecir hoy.
+        </p>
+        <div class="hero-actions">
+          <a href="#muestra"  class="btn-primary">Ver columnas y muestra →</a>
+          <a href="#descarga" class="btn-ghost">Descargar CSV gratis</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ STATS ══════════ -->
+    <div class="stats-bar" role="region" aria-label="Cifras del dataset">
+      <div class="stats-inner">
+        <div>
+          <span class="stat-num">15k+</span>
+          <span class="stat-label">Partidos registrados</span>
+        </div>
+        <div>
+          <span class="stat-num">2002–2026</span>
+          <span class="stat-label">Rango histórico</span>
+        </div>
+        <div>
+          <span class="stat-num">48</span>
+          <span class="stat-label">Selecciones cubiertas</span>
+        </div>
+        <div>
+          <span class="stat-num">CSV</span>
+          <span class="stat-label">Listo para pandas / Power BI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ MUESTRA / COLUMNAS ══════════ -->
+    <section id="muestra" aria-labelledby="muestra-heading">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">// estructura del dataset</p>
+        <h2 class="section-title" id="muestra-heading">Qué incluye cada registro</h2>
+        <p class="section-sub">
+          Cada fila es un partido. Variables pensadas para ingeniería de
+          características y modelos de clasificación o regresión.
+        </p>
+
+        <div class="dataset-cols">
+          <div class="dataset-col">fecha</div>
+          <div class="dataset-col">torneo</div>
+          <div class="dataset-col">seleccion_local</div>
+          <div class="dataset-col">seleccion_visitante</div>
+          <div class="dataset-col">goles_local</div>
+          <div class="dataset-col">goles_visitante</div>
+          <div class="dataset-col">resultado</div>
+          <div class="dataset-col">ranking_fifa_local</div>
+          <div class="dataset-col">ranking_fifa_visit</div>
+          <div class="dataset-col">es_local_real</div>
+          <div class="dataset-col">continente</div>
+          <div class="dataset-col">racha_local</div>
+        </div>
+
+        <div class="table-preview" role="region" aria-label="Muestra del dataset de partidos">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">fecha</th>
+                <th scope="col">torneo</th>
+                <th scope="col">local</th>
+                <th scope="col">visitante</th>
+                <th scope="col">g_local</th>
+                <th scope="col">g_visit</th>
+                <th scope="col">resultado</th>
+                <th scope="col">rk_local</th>
+                <th scope="col">rk_visit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025-09-04</td><td>Clasif. CONCACAF</td><td>México</td><td>EE. UU.</td>
+                <td>2</td><td>1</td><td><span class="tag tag-ok">L</span></td><td>14</td><td>16</td>
+              </tr>
+              <tr>
+                <td>2025-10-10</td><td>Clasif. CONMEBOL</td><td>Argentina</td><td>Brasil</td>
+                <td>1</td><td>1</td><td><span class="tag tag-ok">E</span></td><td>1</td><td>5</td>
+              </tr>
+              <tr>
+                <td>2025-11-15</td><td>Amistoso</td><td>España</td><td>Francia</td>
+                <td>0</td><td>2</td><td><span class="tag tag-ok">V</span></td><td>8</td><td>2</td>
+              </tr>
+              <tr>
+                <td>2026-03-26</td><td>Clasif. UEFA</td><td>Inglaterra</td><td>Alemania</td>
+                <td>3</td><td>0</td><td><span class="tag tag-ok">L</span></td><td>4</td><td>10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-sub" style="margin-bottom:0;">
+          La muestra es ilustrativa. El CSV completo se entrega al confirmar tus datos abajo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════ CASOS DE USO ══════════ -->
+    <section id="usos" aria-labelledby="usos-heading" style="background:var(--color-surface);">
+      <div class="container">
+        <p class="section-label" aria-hidden="true">// para qué sirve</p>
+        <h2 class="section-title" id="usos-heading">Listo para tu pipeline de ML</h2>
+        <p class="section-sub">Pensado para quien construye modelos, no solo para mirar números.</p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🎯</div>
+            <h3>Clasificación de resultados</h3>
+            <p>Entrena modelos (Logistic Regression, LDA, Random Forest) para predecir local / empate / visitante con variables ya tabuladas.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">📈</div>
+            <h3>Ingeniería de características</h3>
+            <p>Rachas, diferencias de ranking FIFA y localía real ya calculadas para que ahorres horas de preprocesamiento.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🔌</div>
+            <h3>Plug &amp; play</h3>
+            <p>CSV con encabezados limpios, sin celdas vacías ni caracteres rotos. Importa directo a pandas, scikit-learn o Power BI.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER CON FORMULARIO DE DESCARGA PROTEGIDA ══════════ -->
+  <footer id="descarga" class="site-footer" style="text-align:left; padding-top:var(--space-2xl); padding-bottom:var(--space-2xl);">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:var(--space-xl);">
+        <p class="section-label" aria-hidden="true">// descarga gratuita</p>
+        <h2 class="section-title">Descarga el dataset completo</h2>
+        <p class="section-sub" style="margin:0 auto;">
+          Completa tus datos para acceder al CSV. Lo registramos y la descarga inicia al instante.
+        </p>
+      </div>
+
+      <div class="download-gate">
+        <form id="download-form" novalidate>
+
+          <!-- Honeypot anti-bots (oculto para humanos) -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">No llenar este campo</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="download-gate-grid">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required autocomplete="family-name">
+            </div>
+            <div class="form-group">
+              <label for="edad">Edad</label>
+              <input type="number" id="edad" name="edad" placeholder="Ej. 28" min="1" max="120" required>
+            </div>
+            <div class="form-group">
+              <label for="genero">Género</label>
+              <select id="genero" name="genero" required>
+                <option value="" disabled selected>Selecciona…</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Otro">Otro</option>
+                <option value="Prefiero no decir">Prefiero no decir</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="55 1234 5678" required autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo</label>
+              <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required autocomplete="email">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary form-submit" style="margin-top:var(--space-md);">
+            Descargar CSV →
+          </button>
+
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="footer-inner" style="margin-top:var(--space-2xl);">
+        <p class="footer-logo">Data<span>Dive</span> Solutions</p>
+        <nav class="footer-links" aria-label="Legal">
+          <a href="legal.html">Política de Privacidad</a>
+          <a href="legal.html">Términos y Condiciones</a>
+        </nav>
+        <p>© 2025 DataDive Solutions. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════ FLOATING CTA ══════════ -->
+  <div class="float-cta" aria-label="Contacto rápido">
+    <a href="https://wa.me/525579811317" class="float-btn float-wa"
+       target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">💬</a>
+    <a href="https://www.facebook.com/share/1CLUdDTgsz/?mibextid=wwXlfr" class="float-btn float-fb"
+       target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por Facebook">📘</a>
+  </div>
+
+  <script src="js/mundial.js" defer></script>
+
+</body>
+</html>
