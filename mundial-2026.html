@@ -77,19 +77,19 @@
       </div>
     </section>
 
-    <!-- ══════════ STATS ══════════ -->
+ <!-- ══════════ STATS ══════════ -->
     <div class="stats-bar" role="region" aria-label="Cifras del dataset">
       <div class="stats-inner">
         <div>
-          <span class="stat-num">15k+</span>
-          <span class="stat-label">Partidos registrados</span>
+          <span class="stat-num">9,000+</span>
+          <span class="stat-label">Partidos de selecciones</span>
         </div>
         <div>
-          <span class="stat-num">2002–2026</span>
+          <span class="stat-num">2014–2026</span>
           <span class="stat-label">Rango histórico</span>
         </div>
         <div>
-          <span class="stat-num">48</span>
+          <span class="stat-num">220</span>
           <span class="stat-label">Selecciones cubiertas</span>
         </div>
         <div>
@@ -99,29 +99,36 @@
       </div>
     </div>
 
-    <!-- ══════════ MUESTRA / COLUMNAS ══════════ -->
+<!-- ══════════ MUESTRA / COLUMNAS ══════════ -->
     <section id="muestra" aria-labelledby="muestra-heading">
       <div class="container">
         <p class="section-label" aria-hidden="true">// estructura del dataset</p>
         <h2 class="section-title" id="muestra-heading">Qué incluye cada registro</h2>
         <p class="section-sub">
-          Cada fila es un partido. Variables pensadas para ingeniería de
-          características y modelos de clasificación o regresión.
+          Cada fila es un partido, con marcador, goleadores y minutos, y estadísticas
+          de juego por equipo. Variables crudas listas para ingeniería de
+          características y modelos de conteo, clasificación o regresión.
         </p>
 
         <div class="dataset-cols">
-          <div class="dataset-col">fecha</div>
+          <div class="dataset-col">competencia</div>
           <div class="dataset-col">torneo</div>
-          <div class="dataset-col">seleccion_local</div>
-          <div class="dataset-col">seleccion_visitante</div>
+          <div class="dataset-col">fase</div>
+          <div class="dataset-col">equipo_local</div>
+          <div class="dataset-col">equipo_visitante</div>
           <div class="dataset-col">goles_local</div>
           <div class="dataset-col">goles_visitante</div>
-          <div class="dataset-col">resultado</div>
-          <div class="dataset-col">ranking_fifa_local</div>
-          <div class="dataset-col">ranking_fifa_visit</div>
-          <div class="dataset-col">es_local_real</div>
-          <div class="dataset-col">continente</div>
-          <div class="dataset-col">racha_local</div>
+          <div class="dataset-col">goleadores_local</div>
+          <div class="dataset-col">goleadores_visitante</div>
+          <div class="dataset-col">posesion</div>
+          <div class="dataset-col">tiros_gol</div>
+          <div class="dataset-col">tiros_realizados</div>
+          <div class="dataset-col">tiros_esquina</div>
+          <div class="dataset-col">faltas</div>
+          <div class="dataset-col">tarjetas_amarillas</div>
+          <div class="dataset-col">tarjetas_rojas</div>
+          <div class="dataset-col">salvadas</div>
+          <div class="dataset-col">h2h_goles</div>
         </div>
 
         <div class="table-preview" role="region" aria-label="Muestra del dataset de partidos">
@@ -129,38 +136,39 @@
             <thead>
               <tr>
                 <th scope="col">fecha</th>
-                <th scope="col">torneo</th>
+                <th scope="col">competencia</th>
                 <th scope="col">local</th>
                 <th scope="col">visitante</th>
                 <th scope="col">g_local</th>
                 <th scope="col">g_visit</th>
-                <th scope="col">resultado</th>
-                <th scope="col">rk_local</th>
-                <th scope="col">rk_visit</th>
+                <th scope="col">posesión</th>
+                <th scope="col">tiros_gol</th>
+                <th scope="col">esquinas</th>
+                <th scope="col">amarillas</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>2025-09-04</td><td>Clasif. CONCACAF</td><td>México</td><td>EE. UU.</td>
-                <td>2</td><td>1</td><td><span class="tag tag-ok">L</span></td><td>14</td><td>16</td>
+                <td>2026-06-10</td><td>Amistoso Int.</td><td>Inglaterra</td><td>Costa Rica</td>
+                <td>3</td><td>0</td><td>81–19</td><td>8–0</td><td>11–1</td><td>0–4</td>
               </tr>
               <tr>
-                <td>2025-10-10</td><td>Clasif. CONMEBOL</td><td>Argentina</td><td>Brasil</td>
-                <td>1</td><td>1</td><td><span class="tag tag-ok">E</span></td><td>1</td><td>5</td>
+                <td>2026-06-10</td><td>Amistoso Int.</td><td>Portugal</td><td>Nigeria</td>
+                <td>2</td><td>1</td><td>61–39</td><td>6–2</td><td>3–2</td><td>2–2</td>
               </tr>
               <tr>
-                <td>2025-11-15</td><td>Amistoso</td><td>España</td><td>Francia</td>
-                <td>0</td><td>2</td><td><span class="tag tag-ok">V</span></td><td>8</td><td>2</td>
+                <td>2026-06-09</td><td>Amistoso Int.</td><td>Argentina</td><td>Islandia</td>
+                <td>3</td><td>0</td><td>63–37</td><td>7–1</td><td>2–2</td><td>2–6</td>
               </tr>
               <tr>
-                <td>2026-03-26</td><td>Clasif. UEFA</td><td>Inglaterra</td><td>Alemania</td>
-                <td>3</td><td>0</td><td><span class="tag tag-ok">L</span></td><td>4</td><td>10</td>
+                <td>2026-06-09</td><td>Amistoso Int.</td><td>Hungría</td><td>Kazajistán</td>
+                <td>3</td><td>1</td><td>71–29</td><td>6–5</td><td>3–5</td><td>2–5</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p class="section-sub" style="margin-bottom:0;">
-          La muestra es ilustrativa. El CSV completo se entrega al confirmar tus datos abajo.
+          La muestra es ilustrativa (estadísticas mostradas como local–visitante). El CSV completo se entrega al confirmar tus datos abajo.
         </p>
       </div>
     </section>
